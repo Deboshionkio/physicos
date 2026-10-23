@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apresentação de Projeto | Site Oficial Physicos® Jurerê Internacional</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A059',
+              goldLight: '#DFBE7B',
+              goldDark: '#9C7A32',
+              slateDark: '#0B1320',
+              sand: '#FAF8F5',
+              stoneLight: '#EDE8DF'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif-luxury { font-family: 'Cormorant Garamond', Georgia, serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #ffffff; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-brand-gold selection:text-black">
+
+  <!-- Floating Control Bar -->
+  <div class="no-print fixed top-6 right-6 z-50 flex items-center gap-3 bg-slate-950/90 border border-brand-gold/40 p-2.5 rounded-full shadow-2xl backdrop-blur-md">
+    <button onclick="window.print()" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold hover:bg-brand-goldLight text-slate-950 transition flex items-center gap-2">
+      <i class="fa-solid fa-print"></i>
+      <span>Exportar PDF / Imprimir</span>
+    </button>
+    <a href="index.html" target="_blank" class="px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-slate-800 hover:bg-slate-700 text-white transition flex items-center gap-1.5">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      <span>Ver Site em Tela Cheia</span>
+    </a>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+
+    <!-- COVER / SLIDE 1 -->
+    <div class="min-h-[75vh] flex flex-col justify-between border-b border-slate-800 pb-16">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-6">
+        <div>
+          <span class="font-serif-luxury text-3xl font-bold tracking-widest text-white">PHYSICOS</span>
+          <span class="block text-xs uppercase tracking-[0.3em] text-brand-gold">Jurerê Internacional</span>
+        </div>
+        <div class="text-right text-xs text-slate-400">
+          <p class="font-semibold text-slate-200">Projeto Executivo Web & Posicionamento Digital</p>
+          <p>Florianópolis - SC • Outubro de 2026</p>
+        </div>
+      </div>
+
+      <div class="py-12 space-y-6">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-gold/10 border border-brand-gold/30 text-brand-goldLight">
+          Apresentação de Conceito & Arquitetura
+        </span>
+        <h1 class="font-serif-luxury text-4xl sm:text-6xl font-light text-white leading-tight">
+          A Nova Fronteira Digital da <br />
+          <span class="italic font-normal text-brand-goldLight">Physicos® Jurerê Internacional</span>
+        </h1>
+        <p class="text-slate-300 text-lg max-w-2xl font-light leading-relaxed">
+          Proposta de presença online de alta conversão, desenhada para refletir o luxo, a sofisticação e a excelência clínica que seus pacientes encontram no endereço mais exclusivo da Ilha.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-slate-800 text-xs">
+        <div>
+          <span class="text-slate-400 block uppercase">Cliente</span>
+          <span class="text-white font-bold text-sm">Physicos Jurerê</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block uppercase">Localização</span>
+          <span class="text-white font-bold text-sm">R. das Moréias, 98</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block uppercase">Instagram Oficial</span>
+          <span class="text-white font-bold text-sm">@physicos.jurere</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block uppercase">WhatsApp Oficial</span>
+          <span class="text-white font-bold text-sm">(48) 99616-1396</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: DIAGNÓSTICO & OBJETIVOS -->
+    <div class="space-y-8 border-b border-slate-800 pb-16 page-break">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest">01. Diagnóstico & Visão Estratégica</span>
+        <div class="flex-1 h-[1px] bg-slate-800"></div>
+      </div>
+
+      <h2 class="font-serif-luxury text-3xl sm:text-4xl font-light text-white">
+        Por que um Site Próprio é <span class="italic text-brand-gold">Essencial</span> para a Physicos?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center text-lg">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 class="font-serif-luxury text-xl font-bold text-white">Valorização de Ticket Médio</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Procedimentos como <strong>Endolipo®</strong>, <strong>Hipro®</strong> e bioestimuladores exigem autoridade visual. Um site luxuoso ancora o valor dos tratamentos antes mesmo do primeiro contato.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center text-lg">
+            <i class="fa-solid fa-filter-circle-dollar"></i>
+          </div>
+          <h3 class="font-serif-luxury text-xl font-bold text-white">Qualificação de Leads</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Em vez de receber mensagens genéricas "qual o valor?", os pacientes chegam ao WhatsApp já informados sobre indicações, tempo de sessão e recuperação através do modal e do quiz.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center text-lg">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <h3 class="font-serif-luxury text-xl font-bold text-white">Turismo & Temporada</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Jurerê Internacional atrai público de alto padrão de todo o Brasil e exterior (hóspedes de resorts como IL Campanario). O site assegura que a Physicos seja encontrada e transmita confiança imediata.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: ESTRUTURA DO SITE -->
+    <div class="space-y-8 border-b border-slate-800 pb-16 page-break">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest">02. Arquitetura da Informação</span>
+        <div class="flex-1 h-[1px] bg-slate-800"></div>
+      </div>
+
+      <h2 class="font-serif-luxury text-3xl sm:text-4xl font-light text-white">
+        Jornada do Paciente Planejada para <span class="italic text-brand-gold">Alta Conversão</span>
+      </h2>
+
+      <div class="space-y-4 text-xs sm:text-sm">
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Hero</span>
+          <div>
+            <h4 class="font-bold text-white">Abertura de Alto Impacto</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Frase de posicionamento refinado, badges de autoridade (Padrão Ouro, Atendimento Privativo, Jurerê Nobre) e duplo botão de ação.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Conceito</span>
+          <div>
+            <h4 class="font-bold text-white">A Clínica & Filosofia de Beleza Natural</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Apresentação da clínica na Rua das Moréias, 98, destacando equipamentos certificados e protocolos individualizados.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Catálogo</span>
+          <div>
+            <h4 class="font-bold text-white">Procedimentos com Filtros Interativos & Modal Clínico</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Abas interativas (Facial, Corporal, Day Spa) com Endolipo®, Hipro®, Criolipólise 360°, Botox, Bioestimuladores e rituais com pedras quentes.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Simulador</span>
+          <div>
+            <h4 class="font-bold text-white">Simulador Interativo de Protocolo VIP (Quiz)</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Ferramenta exclusiva onde o usuário seleciona objetivo e urgência, gerando recomendação sob medida com link direto para o WhatsApp da clínica.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Feed</span>
+          <div>
+            <h4 class="font-bold text-white">Vitrine do Instagram Oficial (@physicos.jurere)</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Conexão direta com a audiência social, exibindo os posts oficiais de Endolipo, Hipro, Spa e ambiente.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+          <span class="px-2.5 py-1 rounded-md bg-brand-gold text-slate-950 font-bold text-xs mt-0.5">Contato</span>
+          <div>
+            <h4 class="font-bold text-white">Localização, Mapa & WhatsApp Oficial</h4>
+            <p class="text-slate-400 text-xs mt-0.5">Google Maps interativo, horários e botão de atendimento com um clique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: DESIGN SYSTEM & CORES -->
+    <div class="space-y-8 border-b border-slate-800 pb-16 page-break">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest">03. Design System & Identidade Visual</span>
+        <div class="flex-1 h-[1px] bg-slate-800"></div>
+      </div>
+
+      <h2 class="font-serif-luxury text-3xl sm:text-4xl font-light text-white">
+        A Estética do Luxo: <span class="italic text-brand-gold">Cores & Tipografia</span>
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="p-4 rounded-2xl border border-slate-800 bg-[#0B1320] text-center">
+          <div class="h-16 rounded-xl bg-[#0B1320] border border-slate-700 mb-3"></div>
+          <span class="font-bold text-white text-xs block">Slate Nobre</span>
+          <span class="text-slate-400 text-[10px]">#0B1320</span>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-800 bg-[#C5A059]/10 text-center">
+          <div class="h-16 rounded-xl bg-[#C5A059] mb-3"></div>
+          <span class="font-bold text-white text-xs block">Ouro Champanhe</span>
+          <span class="text-slate-400 text-[10px]">#C5A059</span>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-800 bg-[#FAF8F5]/10 text-center">
+          <div class="h-16 rounded-xl bg-[#FAF8F5] mb-3"></div>
+          <span class="font-bold text-white text-xs block">Areia Natural</span>
+          <span class="text-slate-400 text-[10px]">#FAF8F5</span>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-800 bg-[#25D366]/10 text-center">
+          <div class="h-16 rounded-xl bg-[#25D366] mb-3"></div>
+          <span class="font-bold text-white text-xs block">Verde Conversão</span>
+          <span class="text-slate-400 text-[10px]">#25D366</span>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-4">
+        <h4 class="font-serif-luxury text-xl font-bold text-white">Tipografia de Alta Precisão</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+          <div>
+            <span class="text-brand-gold font-bold uppercase tracking-wider block mb-1">Títulos & Destaques</span>
+            <p class="font-serif-luxury text-2xl text-white">Cormorant Garamond</p>
+            <p class="text-slate-400 mt-1">Inspira sofisticação atemporal, herança clássica e elegância mediterrânea.</p>
+          </div>
+          <div>
+            <span class="text-brand-gold font-bold uppercase tracking-wider block mb-1">Textos & Navegação</span>
+            <p class="font-sans text-lg font-bold text-white">Plus Jakarta Sans</p>
+            <p class="text-slate-400 mt-1">Leveza contemporânea, legibilidade perfeita em smartphones e telas retina.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: HOSPEDAGEM & MANUTENÇÃO -->
+    <div class="space-y-8 pb-12">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest">04. Infraestrutura & Entrega Técnica</span>
+        <div class="flex-1 h-[1px] bg-slate-800"></div>
+      </div>
+
+      <h2 class="font-serif-luxury text-3xl sm:text-4xl font-light text-white">
+        Zero Complexidade: <span class="italic text-brand-gold">DreamHost + FileZilla</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm">
+        <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+          <i class="fa-solid fa-server text-brand-gold text-2xl"></i>
+          <h4 class="font-bold text-white text-base">Hospedagem DreamHost</h4>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            Site 100% estático sem necessidade de banco de dados ou Node.js. A publicação é feita simplesmente arrastando a pasta do site via <strong>FileZilla</strong> para a pasta do domínio.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-2xl"></i>
+          <h4 class="font-bold text-white text-base">Central Única de Configuração</h4>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            Todas as informações de contato estão organizadas em uma única linha no topo do arquivo <code>js/main.js</code>. Trocar o telefone ou endereço atualiza o site inteiro instantaneamente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="p-8 rounded-3xl bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-brand-gold/40 text-center space-y-4">
+        <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white">
+          Pronto para Aprovação e Publicação
+        </h3>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+          O projeto está pronto para testes locais, visualização no Vercel e publicação final no servidor oficial DreamHost.
+        </p>
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <a href="index.html" target="_blank" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold hover:bg-brand-goldLight text-slate-950 transition shadow-lg">
+            Navegar no Site da Physicos Jurerê →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

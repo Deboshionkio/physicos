@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physicos® | Estética Avançada & Day Spa em Jurerê Internacional</title>
+  <meta name="description" content="Clínica de Estética Avançada e Day Spa em Jurerê Internacional, Florianópolis. Endolaser, Criolipólise, Botox, Bioestimuladores e Rituais de Bem-Estar." />
+  <meta name="keywords" content="Physicos Jurere, clinica estetica jurere internacional, endolaser florianopolis, criolipolise jurere, botox jurere, day spa jurere internacional" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A059',
+              goldLight: '#DFBE7B',
+              goldDark: '#9C7A32',
+              slateDark: '#0B1320',
+              sand: '#F7F4EE',
+              stoneLight: '#EFE9DE'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="bg-brand-sand text-slate-800 antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- TOP BAR -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-brand-gold/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Rua das Moréias, 98 - Jurerê Internacional, Florianópolis - SC</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline"><i class="fa-regular fa-clock text-brand-gold mr-1.5"></i> Seg a Sáb: 09h às 20h</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/physicos.jurere/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition flex items-center gap-1">
+          <i class="fa-brands fa-instagram text-brand-gold"></i> @physicos.jurere
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="https://wa.me/5548996161396?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Physicos%20Jurerê." target="_blank" class="text-brand-gold font-semibold hover:underline flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp"></i> (48) 99616-1396
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header id="navbar-header" class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-brand-gold/15 transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#inicio" class="flex flex-col group">
+        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-white group-hover:text-brand-gold transition">
+          PHYSICOS
+        </span>
+        <span class="text-[10px] tracking-[0.3em] uppercase text-brand-gold font-light -mt-1">
+          Jurerê Internacional
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#inicio" class="hover:text-brand-gold transition">Início</a>
+        <a href="#sobre" class="hover:text-brand-gold transition">A Clínica</a>
+        <a href="#procedimentos" class="hover:text-brand-gold transition">Tratamentos</a>
+        <a href="#diferenciais" class="hover:text-brand-gold transition">Diferenciais</a>
+        <a href="#social-feed" class="hover:text-brand-gold transition">Instagram</a>
+        <a href="#simulador" class="hover:text-brand-gold transition">Simulador VIP</a>
+        <a href="#depoimentos" class="hover:text-brand-gold transition">Depoimentos</a>
+        <a href="#contato" class="hover:text-brand-gold transition">Localização</a>
+      </nav>
+
+      <!-- CTA Button Desktop -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a 
+          href="https://wa.me/5548996161396?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Physicos%20Jurerê." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-slate-950 bg-gradient-to-r from-brand-goldLight via-brand-gold to-brand-goldDark hover:opacity-95 transition shadow-lg shadow-brand-gold/20 flex items-center gap-2"
+        >
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Agendar Horário</span>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="lg:hidden text-slate-200 hover:text-brand-gold p-2 focus:outline-none"
+        aria-label="Abrir menu"
+      >
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950/98 border-b border-brand-gold/20 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-sm font-medium text-slate-200">
+        <a href="#inicio" class="hover:text-brand-gold transition py-1">Início</a>
+        <a href="#sobre" class="hover:text-brand-gold transition py-1">A Clínica</a>
+        <a href="#procedimentos" class="hover:text-brand-gold transition py-1">Tratamentos</a>
+        <a href="#diferenciais" class="hover:text-brand-gold transition py-1">Diferenciais</a>
+        <a href="#simulador" class="hover:text-brand-gold transition py-1">Simulador de Protocolo</a>
+        <a href="#depoimentos" class="hover:text-brand-gold transition py-1">Depoimentos</a>
+        <a href="#faq" class="hover:text-brand-gold transition py-1">Dúvidas Frequentes</a>
+        <a href="#contato" class="hover:text-brand-gold transition py-1">Localização & Contato</a>
+        
+        <div class="pt-4 border-t border-slate-800">
+          <a 
+            href="https://wa.me/5548991234567?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Physicos%20Jurerê." 
+            target="_blank" 
+            class="w-full text-center py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-950 bg-brand-gold hover:bg-brand-goldLight transition block shadow-md"
+          >
+            <i class="fa-brands fa-whatsapp mr-2 text-sm"></i> Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-slate-950 overflow-hidden">
+    <!-- Background Image with Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80" 
+        alt="Physicos Jurerê Spa e Estética" 
+        class="w-full h-full object-cover object-center opacity-30 scale-105 transform duration-1000"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/40 bg-brand-gold/10 text-brand-goldLight text-xs tracking-widest uppercase mb-6 backdrop-blur-sm">
+        <i class="fa-solid fa-sparkles text-brand-gold"></i>
+        <span>Estética Avançada • Day Spa • Jurerê Internacional</span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight sm:leading-none mb-6">
+        A Excelência do Cuidado <br />
+        <span class="italic font-normal gold-gradient-text">no Destino Mais Nobre da Ilha</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-10">
+        Tecnologia médica de alta performance, protocolos corporais com Endolaser e Criolipólise, harmonização com resultados naturais e relaxamento absoluto a poucos passos do mar.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="https://wa.me/5548991234567?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20personalizada%20na%20Physicos%20Jurerê." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase text-slate-950 bg-gradient-to-r from-brand-goldLight via-brand-gold to-brand-goldDark hover:scale-105 transition shadow-xl shadow-brand-gold/25 flex items-center justify-center gap-2.5"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Agendar Avaliação VIP</span>
+        </a>
+
+        <a 
+          href="#procedimentos" 
+          class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase text-white border border-brand-gold/40 hover:bg-white/5 transition flex items-center justify-center gap-2"
+        >
+          <span>Conhecer Tratamentos</span>
+          <i class="fa-solid fa-arrow-down text-brand-gold text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-16 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold flex-shrink-0">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold">Padrão Ouro</h4>
+            <p class="text-xs text-slate-400">Tecnologia Certificada</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold flex-shrink-0">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold">100% Personalizado</h4>
+            <p class="text-xs text-slate-400">Atendimento Privativo</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold flex-shrink-0">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold">Jurerê Nobre</h4>
+            <p class="text-xs text-slate-400">R. das Moréias, 98</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold flex-shrink-0">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold">Experiência 5★</h4>
+            <p class="text-xs text-slate-400">Máxima Satisfação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="sobre" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Visual Column -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-sand">
+            <img 
+              src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=80" 
+              alt="Ambiente Relaxante Physicos Jurerê" 
+              class="w-full h-[480px] object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-brand-gold/30 text-white">
+              <p class="font-serif text-lg italic text-brand-goldLight">"Onde a ciência estética encontra o verdadeiro bem-estar."</p>
+              <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider">Physicos® Jurerê Internacional</p>
+            </div>
+          </div>
+          <!-- Decorative accent box -->
+          <div class="hidden sm:block absolute -top-4 -right-4 w-28 h-28 border-2 border-brand-gold/40 rounded-3xl -z-10"></div>
+          <div class="hidden sm:block absolute -bottom-4 -left-4 w-28 h-28 bg-brand-stoneLight/80 rounded-3xl -z-10"></div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark">
+            <span class="w-8 h-[1px] bg-brand-gold"></span>
+            Conceito & Filosofia
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 leading-tight">
+            Cuidado exclusivo desenhado para a sua <span class="italic font-normal text-amber-800">singularidade</span>.
+          </h2>
+
+          <p class="text-slate-600 leading-relaxed text-base">
+            Localizada no charmoso bairro de Jurerê, em Florianópolis, a <strong>Physicos®</strong> nasceu com a missão de transformar a experiência de autocuidado em um momento de puro luxo, relaxamento e resultados reais.
+          </p>
+
+          <p class="text-slate-600 leading-relaxed text-base">
+            Não acreditamos em procedimentos padronizados. Cada plano de tratamento é milimetricamente estruturado para valorizar os seus traços naturais, utilizando equipamentos certificados de última geração como <strong>Endolaser</strong> para retração e lipólise, <strong>Criolipólise 360°</strong>, bioestimuladores nobres e protocolos de Day Spa com sensorial único.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-brand-sand border border-brand-gold/20">
+              <i class="fa-solid fa-shield-halved text-brand-gold text-xl mb-2"></i>
+              <h4 class="font-serif text-lg font-bold text-slate-900">Segurança & Ética</h4>
+              <p class="text-xs text-slate-600 mt-1">Ambiente regulamentado e profissionais experientes dedicados ao seu bem-estar.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-sand border border-brand-gold/20">
+              <i class="fa-solid fa-spa text-brand-gold text-xl mb-2"></i>
+              <h4 class="font-serif text-lg font-bold text-slate-900">Day Spa & Desconexão</h4>
+              <p class="text-xs text-slate-600 mt-1">Salas climatizadas, aromaterapia exclusiva e privacidade completa para renovar as energias.</p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a 
+              href="https://wa.me/5548991234567?text=Olá!%20Gostaria%20de%20conhecer%20a%20estrutura%20da%20Physicos%20Jurerê." 
+              target="_blank" 
+              class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-amber-900 hover:text-amber-700 transition"
+            >
+              <span>Conhecer Nossa Estrutura</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCEDURES SECTION -->
+  <section id="procedimentos" class="py-24 bg-brand-sand/70 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark mb-3">
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+          Catálogo Exclusivo
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-slate-900">
+          Tratamentos de <span class="italic font-normal text-amber-800">Alta Tecnologia & Spa</span>
+        </h2>
+        <p class="text-slate-600 mt-4 text-base">
+          Selecione a categoria para explorar nossos protocolos corporais, faciais e experiências sensoriais de relaxamento.
+        </p>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+          <button 
+            data-category="all" 
+            class="tab-btn active px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-amber-500 bg-slate-900 text-amber-400 transition shadow-sm"
+          >
+            Todos os Protocolos
+          </button>
+          <button 
+            data-category="facial" 
+            class="tab-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-slate-200 bg-white text-slate-700 hover:border-amber-400 transition shadow-sm"
+          >
+            Estética Facial
+          </button>
+          <button 
+            data-category="corporal" 
+            class="tab-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-slate-200 bg-white text-slate-700 hover:border-amber-400 transition shadow-sm"
+          >
+            Estética Corporal
+          </button>
+          <button 
+            data-category="spa" 
+            class="tab-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-slate-200 bg-white text-slate-700 hover:border-amber-400 transition shadow-sm"
+          >
+            Day Spa & Bem-Estar
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid of Cards (Rendered by js/main.js) -->
+      <div id="procedures-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <!-- Injetado dinamicamente via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCEDURE DETAIL MODAL -->
+  <div id="procedure-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 hidden">
+    <div id="modal-backdrop" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity"></div>
+
+    <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl z-10 border border-brand-gold/30">
+      <!-- Close button -->
+      <button 
+        id="close-modal-btn" 
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-900/70 text-white hover:bg-slate-900 flex items-center justify-center transition"
+        aria-label="Fechar"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Image -->
+      <div class="relative h-64 bg-slate-900">
+        <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+        <div class="absolute bottom-4 left-6 right-6">
+          <span id="modal-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-slate-950"></span>
+          <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl font-bold text-white mt-2"></h3>
+          <p id="modal-subtitle" class="text-xs sm:text-sm text-slate-300 font-light mt-0.5"></p>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-bold text-brand-goldDark mb-2">Sobre o Procedimento</h4>
+          <p id="modal-desc" class="text-sm sm:text-base text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <!-- Duration & Recovery Info -->
+        <div class="grid grid-cols-2 gap-4 p-4 rounded-2xl bg-brand-sand border border-brand-gold/20">
+          <div>
+            <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Duração Média</span>
+            <span id="modal-duration" class="text-sm font-bold text-slate-900"></span>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Recuperação</span>
+            <span id="modal-recovery" class="text-sm font-bold text-slate-900"></span>
+          </div>
+        </div>
+
+        <!-- Indications -->
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-bold text-brand-goldDark mb-2">Indicações Principais</h4>
+          <ul id="modal-indications" class="space-y-1.5"></ul>
+        </div>
+
+        <!-- Benefits -->
+        <div>
+          <h4 class="text-xs uppercase tracking-wider font-bold text-brand-goldDark mb-2">Principais Benefícios</h4>
+          <ul id="modal-benefits" class="space-y-1.5"></ul>
+        </div>
+
+        <!-- Modal CTA -->
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span class="text-xs text-slate-500">Agende sua avaliação com nossa equipe em Jurerê.</span>
+          <a 
+            id="modal-cta-btn" 
+            href="#" 
+            target="_blank" 
+            class="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-brand-goldLight to-brand-gold hover:opacity-95 transition shadow-lg flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Agendar no WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE PROTOCOL QUIZ / SIMULATOR -->
+  <section id="simulador" class="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <!-- Background accents -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-xs uppercase tracking-widest mb-3">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Simulador Interativo VIP
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light">
+          Descubra o Protocolo Ideal para <span class="italic font-normal gold-gradient-text">Você</span>
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base max-w-xl mx-auto">
+          Responda a 2 perguntas rápidas e receba uma indicação personalizada para o seu momento em Jurerê.
+        </p>
+      </div>
+
+      <!-- Quiz Box -->
+      <div class="bg-slate-900/90 border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        <form id="protocol-quiz-form" class="space-y-8">
+          <!-- Step 1 -->
+          <div>
+            <label class="block text-sm font-semibold uppercase tracking-wider text-brand-gold mb-3">
+              1. Qual é o seu objetivo estético ou de bem-estar principal?
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="goal" value="gordura" class="text-brand-gold focus:ring-brand-gold" required />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Redução de Gordura Localizada</span>
+                  <span class="text-xs text-slate-400">Endolaser corporal e Criolipólise 360°</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="goal" value="flacidez" class="text-brand-gold focus:ring-brand-gold" />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Rejuvenescimento Facial & Firmeza</span>
+                  <span class="text-xs text-slate-400">Bioestimuladores de colágeno e Botox</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="goal" value="spa" class="text-brand-gold focus:ring-brand-gold" />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Alívio de Estresse & Day Spa</span>
+                  <span class="text-xs text-slate-400">Massagens relaxantes e pedras quentes</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="goal" value="pos_operatorio" class="text-brand-gold focus:ring-brand-gold" />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Pós-Cirúrgico & Drenagem Linfática</span>
+                  <span class="text-xs text-slate-400">Aceleração de recuperação e desinchaço</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div>
+            <label class="block text-sm font-semibold uppercase tracking-wider text-brand-gold mb-3">
+              2. Qual a sua urgência ou horizonte de tempo?
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="timeline" value="imediato" class="text-brand-gold focus:ring-brand-gold" required />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Evento Próximo</span>
+                  <span class="text-xs text-slate-400">Nas próximas 1 a 2 semanas</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="timeline" value="planejado" class="text-brand-gold focus:ring-brand-gold" />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Plano Progressivo</span>
+                  <span class="text-xs text-slate-400">Resultados consolidados</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-brand-gold/60 cursor-pointer transition">
+                <input type="radio" name="timeline" value="recorrente" class="text-brand-gold focus:ring-brand-gold" />
+                <div>
+                  <span class="block text-sm font-semibold text-white">Cuidado Frequente</span>
+                  <span class="text-xs text-slate-400">Estilo de vida & bem-estar</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <button 
+              type="submit" 
+              class="px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-slate-950 bg-gradient-to-r from-brand-goldLight via-brand-gold to-brand-goldDark hover:opacity-95 transition shadow-xl shadow-brand-gold/20"
+            >
+              Calcular Protocolo Recomendado
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result Box (Hidden by default) -->
+        <div id="quiz-result" class="hidden text-center space-y-6 py-4 animate-fade-in">
+          <div class="w-16 h-16 rounded-full bg-brand-gold/20 border border-brand-gold text-brand-gold flex items-center justify-center mx-auto text-2xl">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Seu Protocolo Sob Medida</span>
+            <h3 id="result-plan-title" class="font-serif text-3xl font-bold text-white mt-1"></h3>
+            <p id="result-plan-desc" class="text-slate-300 max-w-lg mx-auto text-sm sm:text-base mt-2 leading-relaxed"></p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <a 
+              id="result-plan-cta" 
+              href="#" 
+              target="_blank" 
+              class="w-full sm:w-auto px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-slate-950 bg-brand-gold hover:bg-brand-goldLight transition shadow-lg flex items-center justify-center gap-2"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Agendar Avaliação Deste Protocolo</span>
+            </a>
+
+            <button 
+              id="quiz-reset-btn" 
+              type="button" 
+              class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold tracking-wider text-slate-300 border border-slate-700 hover:bg-slate-800 transition"
+            >
+              Refazer Simulação
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark mb-3">
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+          Por que a Physicos Jurerê?
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-slate-900">
+          A Diferença de um Atendimento <span class="italic font-normal text-amber-800">Verdadeiramente Exclusivo</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl bg-brand-sand border border-brand-gold/20 hover-lift">
+          <div class="w-14 h-14 rounded-2xl bg-white border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Privacidade & Discrição</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Agendamentos com intervalos dedicados para evitar salas de espera cheias. Você desfruta do seu procedimento com discrição absoluta no coração de Jurerê.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-brand-sand border border-brand-gold/20 hover-lift">
+          <div class="w-14 h-14 rounded-2xl bg-white border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Tecnologia Certificada</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Trabalhamos exclusivamente com marcas consagradas pela ANVISA e equipamentos de ponta para proporcionar segurança impecável e resultados superiores.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-brand-sand border border-brand-gold/20 hover-lift">
+          <div class="w-14 h-14 rounded-2xl bg-white border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Harmonia & Naturalidade</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            O objetivo não é mudar quem você é, mas rejuvenescer e ressaltar seus pontos fortes com sutileza, elegância e acabamento refinado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="depoimentos" class="py-24 bg-brand-sand/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark mb-3">
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+          Experiências Reais
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-slate-900">
+          O que dizem os nossos <span class="italic font-normal text-amber-800">pacientes</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Depoimento 1 -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-gold/15 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "Fiz o Endolaser na região da papada e o resultado superou todas as minhas expectativas. O contorno do meu maxilar voltou a ficar desenhado e ninguém percebeu que fiz procedimento, apenas diziam que eu estava mais radiante!"
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-sand border border-brand-gold flex items-center justify-center font-serif font-bold text-amber-900">
+              CL
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">Camila L.</h5>
+              <span class="text-xs text-slate-400">Jurerê Internacional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-gold/15 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "O Day Spa da Physicos é um refúgio. Fui atendida como uma rainha, a massagem com pedras quentes e a atmosfera me renovaram por completo. Recomendo de olhos fechados para quem mora ou passa férias em Florianópolis."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-sand border border-brand-gold flex items-center justify-center font-serif font-bold text-amber-900">
+              RF
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">Renata F.</h5>
+              <span class="text-xs text-slate-400">São Paulo / Temporada Jurerê</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-gold/15 flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "Ambiente impecável, super higiênico e equipe muito capacitada. Fiz protocolo com bioestimuladores e botox e o resultado foi o mais natural possível, exatamente como eu sonhava."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-sand border border-brand-gold flex items-center justify-center font-serif font-bold text-amber-900">
+              MS
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">Mariana S.</h5>
+              <span class="text-xs text-slate-400">Florianópolis - SC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL FEED & INSTAGRAM SHOWCASE -->
+  <section id="social-feed" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark mb-3">
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+          Conecte-se Conosco
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-slate-900">
+          Direto do Nosso Feed no <span class="italic font-normal text-amber-800">Instagram</span>
+        </h2>
+        <p class="text-slate-600 mt-4 text-base">
+          Acompanhe bastidores, explicações clínicas e transformações reais no perfil oficial da clínica.
+        </p>
+
+        <!-- Instagram Profile Banner Card -->
+        <div class="mt-8 inline-flex flex-col sm:flex-row items-center gap-4 p-4 pr-6 rounded-2xl bg-brand-sand border border-brand-gold/30 shadow-sm">
+          <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-rose-500 to-amber-300 flex items-center justify-center">
+            <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-brand-gold text-xl font-bold font-serif">
+              P
+            </div>
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-1.5">
+              <span class="font-bold text-slate-900 text-sm">physicos.jurere</span>
+              <i class="fa-solid fa-circle-check text-sky-500 text-xs" title="Perfil Oficial"></i>
+            </div>
+            <p class="text-xs text-slate-500">Physicos® • Jurerê Internacional | Estética Avançada & Spa</p>
+          </div>
+          <a 
+            href="https://www.instagram.com/physicos.jurere/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="sm:ml-4 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-amber-600 to-rose-600 hover:opacity-90 transition flex items-center gap-1.5 shadow-sm"
+          >
+            <i class="fa-brands fa-instagram"></i>
+            <span>Seguir no Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Instagram Grid of Realistic Posts -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Post 1: Endolipo -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" 
+            alt="Endolipo Physicos Jurerê" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Endolipo®</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "Protocolo exclusivo de Endolipo: ação lipolítica potente aliada à retração intensa de pele. Evolução comprovada de até 90 dias sem cortes."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Curtido por pacientes</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Agendamentos</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2: Hipro Ultrassom Microfocado -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1512290900672-1f41e57c5e2a?auto=format&fit=crop&w=800&q=80" 
+            alt="Hipro Ultrassom Microfocado Physicos Jurerê" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Hipro®</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "O poder do Ultrassom Microfocado Hipro na Physicos: contração da camada muscular SMAS para efeito lifting facial e redução de papada imediato."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Destaque da semana</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Lifting Natural</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3: Day Spa & Relaxamento -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" 
+            alt="Day Spa Jurerê Internacional" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Day Spa</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "Um santuário de bem-estar a poucos metros da praia de Jurerê. Aromaterapia botânica, pedras vulcânicas e desaceleração completa."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Spa Experience</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Rituais VIP</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 4: Harmonização Facial & Naturalidade -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" 
+            alt="Toxina Botulínica e Rejuvenescimento" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Botox & Glow</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "Harmonização que preserva a sua identidade. Rugas suavizadas, olhar aberto e viço sem rigidez artificial."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Beleza Consciente</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Naturalidade</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 5: Criolipólise 360 -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" 
+            alt="Criolipólise 360 Physicos Jurerê" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Criolipólise</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "Tecnologia 360° para destruição de células de gordura por resfriamento controlado. Conforto total e sem tempo de inatividade."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Remodelagem</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Contorno Corporal</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 6: A Clínica e Localização -->
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative rounded-2xl overflow-hidden bg-slate-950 shadow-md aspect-square flex flex-col justify-end"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" 
+            alt="Ambiente Physicos Jurerê" 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 p-5 text-white">
+            <div class="flex items-center justify-between text-xs text-brand-goldLight mb-2">
+              <span class="font-semibold uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @physicos.jurere
+              </span>
+              <span class="bg-amber-600/80 px-2 py-0.5 rounded text-[10px] text-white font-bold">Jurerê Nobre</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-2 leading-relaxed">
+              "Rua das Moréias, 98: Salas privativas, atendimento com intervalo exclusivo e conforto absoluto. Esperamos por você."
+            </p>
+            <div class="mt-3 flex items-center gap-4 text-xs text-slate-300 opacity-90">
+              <span><i class="fa-regular fa-heart mr-1 text-rose-400"></i> Florianópolis</span>
+              <span><i class="fa-regular fa-comment mr-1"></i> Exclusividade</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Follow Button Bottom -->
+      <div class="text-center mt-12">
+        <a 
+          href="https://www.instagram.com/physicos.jurere/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-slate-950 bg-brand-gold hover:bg-brand-goldLight transition shadow-md"
+        >
+          <i class="fa-brands fa-instagram text-base"></i>
+          <span>Acompanhar @physicos.jurere no Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-goldDark mb-3">
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+          Esclareça suas dúvidas
+          <span class="w-6 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light text-slate-900">
+          Perguntas <span class="italic font-normal text-amber-800">Frequentes</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Item 1 -->
+        <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-brand-sand/40">
+          <button class="faq-question w-full p-6 text-left flex items-center justify-between text-slate-900 font-semibold text-base sm:text-lg focus:outline-none">
+            <span>É necessário fazer uma consulta de avaliação antes do procedimento?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-gold transition duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4">
+            Sim! A avaliação prévia é fundamental na Physicos Jurerê. Nela avaliamos suas características individuais, queixas, histórico de saúde e expectativas, indicando com precisão o tratamento mais seguro e eficaz para seu caso.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-brand-sand/40">
+          <button class="faq-question w-full p-6 text-left flex items-center justify-between text-slate-900 font-semibold text-base sm:text-lg focus:outline-none">
+            <span>O procedimento com Endolaser dói ou exige repouso longo?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-gold transition duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4">
+            O procedimento é realizado com anestesia local para total conforto do paciente. O pós costuma ser muito tranquilo, com leve inchaço e retorno às atividades leves geralmente em 24 a 48 horas, sem necessidade de internação.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-brand-sand/40">
+          <button class="faq-question w-full p-6 text-left flex items-center justify-between text-slate-900 font-semibold text-base sm:text-lg focus:outline-none">
+            <span>Como posso presentear alguém com um voucher de Day Spa?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-gold transition duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4">
+            Disponibilizamos o Gift Card VIP Physicos em formato digital ou físico elegante. Basta entrar em contato com nossa concierge via WhatsApp e personalizamos o pacote com o nome da pessoa presenteada.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-brand-sand/40">
+          <button class="faq-question w-full p-6 text-left flex items-center justify-between text-slate-900 font-semibold text-base sm:text-lg focus:outline-none">
+            <span>Quais são as formas de pagamento aceitas na clínica?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-gold transition duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4">
+            Aceitamos cartões de crédito das principais bandeiras com opções de parcelamento, cartões de débito e PIX. Planos de tratamento e pacotes têm condições especiais personalizadas na consulta.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT -->
+  <section id="contato" class="py-24 bg-slate-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Info Column -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold mb-3">
+              <span class="w-6 h-[1px] bg-brand-gold"></span>
+              Localização Privilegiada
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-light">
+              Visite a <span class="italic font-normal gold-gradient-text">Physicos Jurerê</span>
+            </h2>
+            <p class="text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">
+              Estamos situados no charmoso bairro de Jurerê, com ambiente climatizado, estacionamento fácil e discrição para sua comodidade.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Endereço</h4>
+                <p class="text-xs sm:text-sm text-slate-300">Rua das Moréias, 98 - Jurerê, Florianópolis - SC, 88053-535</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Agendamentos & Concierge</h4>
+                <p class="text-xs sm:text-sm text-slate-300">(48) 99616-1396 • Atendimento com hora marcada</p>
+                <a href="https://wa.me/5548996161396?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Physicos%20Jurerê." target="_blank" class="text-xs text-brand-gold hover:underline font-semibold mt-1 inline-block">
+                  Conversar no WhatsApp →
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Horário de Funcionamento</h4>
+                <p class="text-xs sm:text-sm text-slate-300">Segunda a Sábado: 09h00 às 20h00</p>
+                <p class="text-xs text-slate-500">Atendimento exclusivamente com horário reservado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map / Card Column -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl relative bg-slate-900 h-[450px]">
+            <iframe 
+              src="https://maps.google.com/maps?q=Rua%20das%20Mor%C3%A9ias%2C%2098%20-%20Jurer%C3%AA%2C%20Florian%C3%B3polis%20-%20SC&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-slate-400 py-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-900">
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-widest text-white">PHYSICOS</span>
+          <span class="block text-[10px] tracking-[0.3em] uppercase text-brand-gold">Jurerê Internacional</span>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#inicio" class="hover:text-brand-gold transition">Início</a>
+          <a href="#sobre" class="hover:text-brand-gold transition">A Clínica</a>
+          <a href="#procedimentos" class="hover:text-brand-gold transition">Procedimentos</a>
+          <a href="#social-feed" class="hover:text-brand-gold transition">Instagram</a>
+          <a href="#simulador" class="hover:text-brand-gold transition">Simulador</a>
+          <a href="#contato" class="hover:text-brand-gold transition">Contato</a>
+        </div>
+
+        <div class="flex items-center gap-4 text-lg">
+          <a href="https://www.instagram.com/physicos.jurere/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-black transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5548996161396?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Physicos%20Jurerê." target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-black transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 text-center sm:text-left">
+        <p>© 2026 Physicos® Jurerê Internacional. Todos os direitos reservados.</p>
+        <p>Rua das Moréias, 98 - Jurerê, Florianópolis - SC | Responsável Técnico devidamente habilitado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <aside aria-label="Atendimento pelo WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <span class="hidden sm:inline-block bg-slate-900 text-white text-xs font-semibold py-1.5 px-3 rounded-full mr-2 shadow-lg border border-brand-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      Agende pelo WhatsApp: (48) 99616-1396
+    </span>
+    <a 
+      href="https://wa.me/5548996161396?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Physicos%20Jurerê." 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl pulse-wa transition"
+      aria-label="Conversar no WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </aside>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
