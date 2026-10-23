@@ -38,8 +38,8 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css" />
+  <!-- Custom CSS with Cache Buster -->
+  <link rel="stylesheet" href="css/custom.css?v=3.0" />
 </head>
 <body class="bg-brand-sand text-slate-800 antialiased selection:bg-brand-gold selection:text-white">
 
@@ -137,7 +137,7 @@
   </header>
 
   <!-- HERO SECTION - LUXURY SPLIT REDESIGN -->
-  <section id="inicio" class="relative min-h-[92vh] flex items-center hero-luxury-bg overflow-hidden pt-10 pb-20 lg:py-24">
+  <section id="inicio" class="relative min-h-[92vh] flex items-center bg-[#080E1A] overflow-hidden pt-10 pb-20 lg:py-24" style="background-color: #080E1A; background-image: radial-gradient(circle at 75% 35%, rgba(197, 160, 89, 0.18) 0%, transparent 55%), radial-gradient(circle at 20% 75%, rgba(15, 23, 42, 0.7) 0%, transparent 45%), radial-gradient(circle at 50% 10%, rgba(223, 190, 123, 0.08) 0%, transparent 40%);">
     <!-- Ambient luxury light glow blobs -->
     <div class="absolute top-1/4 right-10 w-[550px] h-[550px] bg-brand-gold/15 rounded-full blur-[130px] pointer-events-none"></div>
     <div class="absolute bottom-10 left-10 w-[450px] h-[450px] bg-slate-800/40 rounded-full blur-[100px] pointer-events-none"></div>
@@ -149,22 +149,22 @@
         <!-- Left Column: High-Class Positioning & Typography (7 Cols) -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <!-- Luxury Badge -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 text-brand-goldLight text-xs tracking-[0.2em] uppercase backdrop-blur-md shadow-sm">
-            <i class="fa-solid fa-crown text-brand-gold text-[11px]"></i>
-            <span class="font-semibold">Clínica Boutique & Day Spa • Jurerê Internacional</span>
+          <!-- Luxury Badge with High Contrast -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-brand-gold/50 bg-[#0F172A]/90 text-amber-300 text-xs tracking-[0.2em] uppercase backdrop-blur-md shadow-lg">
+            <i class="fa-solid fa-crown text-amber-400 text-[11px]"></i>
+            <span class="font-bold">Clínica Boutique & Day Spa • Jurerê Internacional</span>
           </div>
 
-          <!-- Main Regal Title -->
-          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-light text-white tracking-tight leading-[1.08]">
+          <!-- Main Regal Title with High Contrast -->
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-light text-white tracking-tight leading-[1.08] drop-shadow-md">
             A Arte da Beleza <br />
-            <span class="italic font-normal gold-gradient-text">no Destino Mais Nobre</span> <br />
+            <span class="italic font-normal gold-gradient-text drop-shadow-sm">no Destino Mais Nobre</span> <br />
             de Florianópolis
           </h1>
 
-          <!-- Compelling Subtitle -->
-          <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Onde a vanguarda médica internacional encontra o refúgio do bem-estar. Protocolos exclusivos de <strong class="text-white font-medium">Endolipo®</strong>, <strong class="text-white font-medium">Hipro® Ultrassom Microfocado</strong>, bioestimuladores nobres e Day Spa privativo a passos do mar de Jurerê.
+          <!-- Compelling Subtitle with Enhanced Readability -->
+          <p class="text-base sm:text-lg text-slate-100 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow-sm">
+            Onde a vanguarda médica internacional encontra o refúgio do bem-estar. Protocolos exclusivos de <strong class="text-white font-semibold underline decoration-brand-gold/50 underline-offset-4">Endolipo®</strong>, <strong class="text-white font-semibold underline decoration-brand-gold/50 underline-offset-4">Hipro® Ultrassom Microfocado</strong>, bioestimuladores nobres e Day Spa privativo a passos do mar de Jurerê.
           </p>
 
           <!-- Action Buttons -->
@@ -181,31 +181,31 @@
 
             <a 
               href="#procedimentos" 
-              class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase text-white border border-brand-gold/40 hover:bg-white/5 transition flex items-center justify-center gap-2 backdrop-blur-sm"
+              class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase text-white border border-brand-gold/50 bg-slate-900/40 hover:bg-white/10 transition flex items-center justify-center gap-2 backdrop-blur-sm"
             >
               <span>Explorar Tratamentos</span>
               <i class="fa-solid fa-arrow-down text-brand-gold text-xs"></i>
             </a>
           </div>
 
-          <!-- Trust & Reputation Bar -->
-          <div class="pt-8 mt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-left">
+          <!-- Trust & Reputation Bar with High Contrast -->
+          <div class="pt-8 mt-6 border-t border-slate-800/90 grid grid-cols-3 gap-4 text-left">
             <div>
               <div class="flex items-center text-amber-400 text-xs mb-1">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <p class="text-white font-bold text-xs sm:text-sm">4.9 em Jurerê</p>
-              <span class="text-[11px] text-slate-400">Avaliações VIP</span>
+              <span class="text-[11px] text-slate-300 font-medium">Avaliações VIP</span>
             </div>
 
             <div class="border-l border-slate-800 pl-4">
-              <span class="text-brand-gold font-bold text-xs sm:text-sm block">100% Privativo</span>
-              <span class="text-[11px] text-slate-400">Atendimento 1-on-1</span>
+              <span class="text-amber-300 font-bold text-xs sm:text-sm block">100% Privativo</span>
+              <span class="text-[11px] text-slate-300 font-medium">Atendimento 1-on-1</span>
             </div>
 
             <div class="border-l border-slate-800 pl-4">
-              <span class="text-brand-gold font-bold text-xs sm:text-sm block">Padrão Ouro</span>
-              <span class="text-[11px] text-slate-400">Equipamentos ANVISA</span>
+              <span class="text-amber-300 font-bold text-xs sm:text-sm block">Padrão Ouro</span>
+              <span class="text-[11px] text-slate-300 font-medium">Equipamentos ANVISA</span>
             </div>
           </div>
 
@@ -1158,7 +1158,7 @@
     </a>
   </aside>
 
-  <!-- Main JavaScript File -->
-  <script src="js/main.js"></script>
+  <!-- Main JavaScript File with Cache Buster -->
+  <script src="js/main.js?v=3.0"></script>
 </body>
 </html>
