@@ -12,6 +12,26 @@ const CLINIC_INFO = {
   googleMapsUrl: "https://maps.google.com/?q=Rua+das+Mor%C3%A9ias,+98+-+Jurer%C3%AA,+Florian%C3%B3polis+-+SC"
 };
 
+// =========================================================================
+// 🎯 CONFIGURAÇÃO DE RASTREAMENTO & ANÚNCIOS (PIXEL / ANALYTICS)
+// =========================================================================
+// ONDE INSERIR OS IDS DO CLIENTE:
+// Basta colar os códigos dentro das aspas abaixo quando ele contratar o pacote!
+const TRACKING_CONFIG = {
+  // 1. Meta Pixel ID (Facebook / Instagram Ads)
+  // Exemplo: "123456789012345" (deixe vazio "" se o cliente não contratou)
+  metaPixelId: "",
+
+  // 2. Google Analytics 4 Measurement ID
+  // Exemplo: "G-XXXXXXXXXX" (deixe vazio "" se o cliente não contratou)
+  googleAnalyticsId: "",
+
+  // 3. Modo de Demonstração / Teste
+  // true = exibe no Console (F12) os eventos simulados em tempo real
+  // false = silencioso para produção final
+  debugMode: true
+};
+
 // Procedimentos e Tratamentos Detalhados
 const PROCEDURES = [
   {
@@ -144,6 +164,7 @@ const PROCEDURES = [
 
 // Initialize on DOM Loaded
 document.addEventListener("DOMContentLoaded", () => {
+  initTracking();
   setupNavigation();
   renderProcedures("all");
   setupFilterTabs();
@@ -449,8 +470,74 @@ function buildWhatsAppUrl(text) {
   return `https://wa.me/${CLINIC_INFO.whatsappNumber}?text=${encoded}`;
 }
 
+// =========================================================================
+// 🚀 MOTOR DE RASTREAMENTO INTELIGENTE (FAIL-SAFE / PLUG & PLAY)
+// =========================================================================
+function initTracking() {
+  // 1. Injeção dinâmica do Meta Pixel (se o ID for preenchido)
+  if (TRACKING_CONFIG.metaPixelId) {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    window.fbq('init', TRACKING_CONFIG.metaPixelId);
+    window.fbq('track', 'PageView');
+
+    if (TRACKING_CONFIG.debugMode) {
+      console.log("%c🎯 [META PIXEL CONECTADO]: ID " + TRACKING_CONFIG.metaPixelId + " ativo e PageView registrado!", "color: #10B981; font-weight: bold;");
+    }
+  }
+
+  // 2. Injeção dinâmica do Google Analytics (se o ID for preenchido)
+  if (TRACKING_CONFIG.googleAnalyticsId) {
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_CONFIG.googleAnalyticsId}`;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', TRACKING_CONFIG.googleAnalyticsId);
+
+    if (TRACKING_CONFIG.debugMode) {
+      console.log("%c📊 [GOOGLE ANALYTICS CONECTADO]: ID " + TRACKING_CONFIG.googleAnalyticsId + " ativo!", "color: #3B82F6; font-weight: bold;");
+    }
+  }
+
+  // 3. Feedback visual no Console para modo de teste (quando ainda sem os IDs)
+  if (!TRACKING_CONFIG.metaPixelId && !TRACKING_CONFIG.googleAnalyticsId && TRACKING_CONFIG.debugMode) {
+    console.log("%c🎯 [SISTEMA DE ANÚNCIOS PRONTO]: Modo Sandbox ativo! Clique em qualquer botão de WhatsApp para ver o evento 'Lead' disparando aqui no Console.", "color: #D4AF37; font-weight: bold; border: 1px solid #D4AF37; padding: 4px; border-radius: 4px;");
+  }
+}
+
+// Disparo Seguro de Conversão de Lead
+function trackWhatsAppLead(procedureName = "Agendamento Geral") {
+  // Disparo Meta Pixel (se ativo) ou Simulação no Console
+  if (TRACKING_CONFIG.metaPixelId && typeof window.fbq === 'function') {
+    window.fbq('track', 'Lead', { content_name: procedureName, currency: 'BRL' });
+  } else if (TRACKING_CONFIG.debugMode) {
+    console.log("%c🎯 [META PIXEL - EVENTO DISPARADO]: Lead capturado!", "background: #047857; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;", { procedimento: procedureName, status: "Pronto para enviar aos anúncios" });
+  }
+
+  // Disparo Google Analytics (se ativo) ou Simulação no Console
+  if (TRACKING_CONFIG.googleAnalyticsId && typeof window.gtag === 'function') {
+    window.gtag('event', 'generate_lead', {
+      event_category: 'WhatsApp',
+      event_label: procedureName
+    });
+  } else if (TRACKING_CONFIG.debugMode) {
+    console.log("%c📊 [GOOGLE ANALYTICS - EVENTO DISPARADO]: generate_lead registrado!", "background: #1D4ED8; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;", { procedimento: procedureName });
+  }
+}
+
 function setupWhatsAppLinks() {
-  // Atualiza automaticamente todos os links do WhatsApp para o número configurado em CLINIC_INFO
+  // Atualiza automaticamente todos os links do WhatsApp e adiciona rastreamento de clique
   const allWhatsAppLinks = document.querySelectorAll('a[href*="wa.me"]');
   allWhatsAppLinks.forEach(link => {
     try {
@@ -460,10 +547,18 @@ function setupWhatsAppLinks() {
         const urlObj = new URL(currentHref.startsWith("http") ? currentHref : `https://${currentHref}`);
         const textParam = urlObj.searchParams.get("text") || "Olá! Gostaria de mais informações sobre a Physicos Jurerê.";
         link.setAttribute("href", buildWhatsAppUrl(textParam));
+
+        // Rastreamento automático e seguro no clique
+        link.addEventListener("click", () => {
+          trackWhatsAppLead(textParam);
+        });
       }
     } catch (e) {
       // Fallback
       link.setAttribute("href", buildWhatsAppUrl("Olá! Gostaria de agendar um horário na Physicos Jurerê."));
+      link.addEventListener("click", () => {
+        trackWhatsAppLead("Agendamento WhatsApp");
+      });
     }
   });
 }
