@@ -132,3 +132,36 @@ html {
 .hover-lift:hover .img-zoom-container img {
   transform: scale(1.07);
 }
+
+/* Floating animation for luxury badges */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-slow 4.5s ease-in-out infinite reverse;
+}
+
+/* Luxury Hero Ambient Background */
+.hero-luxury-bg {
+  background: #080E1A;
+  background-image: 
+    radial-gradient(circle at 75% 35%, rgba(197, 160, 89, 0.16) 0%, transparent 55%),
+    radial-gradient(circle at 20% 75%, rgba(30, 41, 59, 0.5) 0%, transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(223, 190, 123, 0.08) 0%, transparent 40%);
+}
+
+/* Golden border glow */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(197, 160, 89, 0.25);
+}
+
